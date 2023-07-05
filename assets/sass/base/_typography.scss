@@ -1,0 +1,69 @@
+
+.heading{
+        &-lg{
+            @include font($heading-lg,$color-white,normal);
+
+            @include viewport-sm{
+                @include font($heading-sm,null,null);
+            }
+        }
+
+        &-md{
+            @include font($heading-md,$color-white,normal);
+
+            @include viewport-sm{
+
+                @include font($heading-xs,null,null);
+                text-align: center;
+            }
+        }
+
+        &-greyish-brown{
+            color:$color-greyish-brown;
+        }
+
+        &-sm{
+            @include font($heading-sm,$color-dark-black,null);
+
+            @include viewport-sm{
+                @include font($txt-xl,null,null);
+            }
+        }
+
+        &-xs{
+            @include font($heading-xs,$color-white,null);
+        }
+
+    }
+
+    .txt{
+        &-xl{
+            @include font($txt-xl,$color-white,null);
+        }
+        &-lg{
+            @include font($txt-lg,$color-white,null);
+        }
+        &-md{
+            @include font($txt-md,$color-white,null);
+
+
+            @include viewport-sm{
+                @include font($txt-sm,$color-white,null);
+                
+            }
+        }
+        &-sm{
+            @include font($txt-sm,$color-white,null);
+        }
+        &-xs{
+            @include font($txt-xs,$color-white,null);
+        }
+
+        &-fs-24{
+            @include font($txt-fs-24,$color-white,null);
+        }
+
+        &-fs-20{
+            @include font($txt-fs-20,$color-white,null);
+        }
+    }

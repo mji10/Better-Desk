@@ -1,0 +1,118 @@
+.footer{
+    position: relative;
+    z-index: 1;
+    background-color:$color-dark-blue;
+    line-height: 1.5;
+    .ft {
+        &-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        &-title {
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            color: $color-white;
+        }
+        
+        &-links{
+            color: $color-white;
+            opacity: 0.6;
+            transition: all 0.5s ease-in-out;
+
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+
+
+    &_bottom{
+        background-color: $color-purple;
+        padding: 30px 0;
+        width: 100%;
+
+        p{
+            opacity: 0.6;
+            max-width: 903px;
+            margin: auto;
+            text-align: center;
+            span{
+                font-weight:600;
+                opacity: 1;
+            }
+
+            .url{
+                color: inherit;
+                text-decoration:underline;
+                display: inline;
+            }
+        }
+    }
+}
+
+/* Footer main */
+.ft-main {
+    padding: 60px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+
+    @include viewport-sm {
+        // flex-direction: column;
+        @include flex(null,null,null,column);
+    }
+
+    &-logo {
+        @include size(30%);
+        @include flex(flex, null, null,column);
+
+        @include viewport-sm {
+            @include size(100%);
+            @include flex(flex, center, center,null);
+            text-align: center;
+        }
+    }
+
+    &-description{
+        color:$color-white;
+        opacity: 0.6;
+        margin-top: 23px
+    }
+
+    &-content {
+        @include size(30%);
+
+        @include flex(flex, space-between, null,null);
+
+        @include viewport-sm {
+            @include flex(flex, space-between, start,null);
+            @include size(100%);
+            margin-top: 50px;
+        }
+    }
+
+    &-social{
+        width: 30%;
+        @include flex(flex,end,null,null);
+
+        a{
+            margin-right:12px;
+            color:$color-white;
+            opacity: 0.6;
+            transition: all 0.5s ease-in-out;
+
+            &:hover{
+                opacity: 1;
+                transform: scale(1.3);
+            }
+        }
+
+        @include viewport-sm{
+            @include size(100%);
+            @include flex(flex,center,null,null);
+            margin-top: 50px;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+
+@mixin font($font-size,$color,$line-height){
+  font-size: $font-size;
+  color: $color;
+  line-height: $line-height;
+}
+
+
+@mixin flex($display , $justify-content, $align-items , $flex-direction){
+
+  display:$display;
+  justify-content: $justify-content;
+  align-items:$align-items;
+  flex-direction:$flex-direction;
+}
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin size($width:null,$height:null){
+
+  width: $width;
+  height: $height;
+}
+
+
+// Media Queries
+
+@mixin viewport-xs {
+  @media (min-width: map-get($breakpoint,"viewport-xs")){
+      @content
+  }
+};
+
+@mixin viewport-sm {
+  @media (min-width: map-get($breakpoint,"viewport-xs")) and (max-width: map-get($breakpoint,"viewport-md")){
+      @content
+  }
+};
+
+@mixin viewport-md {
+  @media (min-width: map-get($breakpoint,"viewport-xs")) and (max-width: map-get($breakpoint,"viewport-lg") ){
+      @content
+  }
+};
+
+@mixin viewport-lg {
+  @media (max-width: map-get($breakpoint,"viewport-lg")){
+      @content
+  }
+};
+
+@mixin viewport-xl {
+  @media (min-width: map-get($breakpoint,"viewport-xl")){
+      @content
+  }
+};
+
+
+@mixin media {
+  @media (min-width:$breakpoint){
+      @content
+  }
+}
+
+
+
+

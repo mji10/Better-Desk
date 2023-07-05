@@ -1,0 +1,25 @@
+{
+  "name": "betterdesk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "sass": "^1.63.4"
+  },
+  "dependencies": {
+    "gulp-sourcemaps": "^3.0.0",
+    "mozjpeg": "^8.0.0"
+  }
+}

@@ -1,0 +1,24 @@
+
+@import 'sass-utlis/variables';
+
+@import 'base/fonts';
+
+@import 'base/_reset.scss';
+
+@import 'sass-utlis/mixins';
+
+@import 'sass-utlis/placeholder';
+
+@import 'base/typography';
+
+@import 'layout/header';
+
+@import 'layout/footer';
+
+@import 'components/input';
+
+@import 'components/buttons';
+
+@import 'layout/cards';
+
+@import 'layout/common-layout';

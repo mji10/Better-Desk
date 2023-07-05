@@ -1,0 +1,62 @@
+// Banner Form
+.hero__form {
+    // width: 422px;
+    @extend %form;
+
+    &--input{
+        @extend %form-input;
+    background: $color-greyish;
+    box-shadow: 0 0 8px 0 $color-greyish;
+
+    &::placeholder{
+        color: $color_white;
+        font-size: 16px;
+    }
+
+    &:focus{
+        outline: 0;
+
+        &::placeholder{
+            color: transparent;
+        }
+    }
+    }
+
+    &--btn{
+        @extend %form-btn;
+        background: $color-cyan;
+        box-shadow: 0 1px 6px 0 #4449a2;
+    }
+}
+
+// Subscribe Form
+// Banner Form
+.subscribe__form {
+    // width: 422px;
+    @extend %form;
+
+    &--input{
+        @extend %form-input;
+    background:transparent;
+    border:1px solid $color-white;
+
+    &::placeholder{
+        color: $color_white;
+        font-size: 16px;
+    }
+
+    &:focus{
+        outline: 0;
+
+        &::placeholder{
+            color: transparent;
+        }
+    }
+    }
+
+    &--btn{
+        @extend %form-btn;
+        background: $color-white;
+        color:$color-cyan;
+    }
+}

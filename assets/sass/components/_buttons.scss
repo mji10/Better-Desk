@@ -1,0 +1,17 @@
+.arrow {
+    // color: $color-blue;
+    text-decoration: none;
+    text-align: center;
+
+    .fa-chevron-right{
+        transition: transform 0.3s ease-out;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        .fa-chevron-right {
+            transform: translateX(7px);
+        }
+    }
+}

@@ -1,0 +1,72 @@
+
+// Colors
+$color-purple: #3e3e58;
+
+$color-offwhite:#f9fafa;
+
+$color-white:#ffffff;
+
+$color-linear1:linear-gradient(117deg, #3dbdb6 3%, #0089ce 100%);
+
+$color-linear2:linear-gradient(98deg, #1172d0 1%, #1d98d6 89%);
+
+$color-dark-indigo:#081941;
+
+$color-cyan:#3dbdb6;
+
+$color-dark-cyan:#0b5e6e;
+
+$color-dark-blue:#1f2532;
+
+$color-light-purple:#39394d;
+
+$color-greyish:rgba(177, 177, 177, 0.5);
+
+$color-greyish-brown:#4a4a4a;
+
+$color-dark-black:#333333;
+
+$color-light-grey:#72808e;
+
+$color-warm-grey:#979797;
+
+$color-video-play-bg:linear-gradient(132deg, #3dbdb6 6%, #0089ce);
+
+$color-purple-md:#3d3f6d;
+
+
+// Button Colors
+$btn-color-primary:#3dbdb6;
+$btn-color-secondary:#ffffff;
+$btn-color-link:#2d8cff;
+
+
+// fonts
+$font-family: 'proxima-nova', sans-serif;
+
+$heading-lg:48px;
+$heading-md:40px;
+$heading-sm:32px;
+$heading-xs:28px;
+
+$txt-fs-24:24px;
+$txt-fs-20:20px;
+
+
+$txt-xl:18px;
+$txt-lg:16px;
+$txt-md:14px;
+$txt-sm:13px;
+$txt-xs:12px;
+
+// text-align
+$text-center:center;
+
+// Media Queries
+$breakpoint:(
+    "viewport-xs":0,
+    "viewport-sm":480px,
+    "viewport-md":760px,
+    "viewport-lg":981px,
+    "viewport-xl":1200px
+);

@@ -1,0 +1,78 @@
+%burger-menu-lines {
+    content: "";
+    background: #ffffff;
+    width: 32px;
+    height: 3px;
+    display: block;
+    position: absolute;
+    left: 0;
+    transition: all ease 0.2s;
+}
+
+%card-bg {
+    border-radius: 50%;
+    height: 99px;
+    width: 99px;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%hr-line {
+    content: "";
+    height: 1px;
+    width: 180px;
+    border: 1px solid $color-warm-grey;
+    display: block;
+    opacity: 0.3;
+    margin-top: 10px;
+    margin-left: -14px;
+}
+
+%form {
+    max-width: 100%;
+    margin: auto;
+    font-size: 0;
+    display: flex;
+
+    @include viewport-sm{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include flex(null , center, center , column)
+    }
+}
+
+%form-input {
+    padding: 16px 20px;
+    border: none;
+    display: inline-block;
+    width: 302px;
+    border-radius: 3px 0 0 3px;
+}
+
+%form-btn {
+    padding: 16px 38px;
+    border: none;
+    border-left: none;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+
+    @include viewport-sm{
+        margin-top:10px;
+    }
+}
+
+%learn-more {
+    font-weight: 700;
+    color: $btn-color-link !important;
+
+}
+
+%onTop{
+    position: relative;
+    z-index: 1;
+}

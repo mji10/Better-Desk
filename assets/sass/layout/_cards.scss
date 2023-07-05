@@ -1,0 +1,136 @@
+// Featues Section
+
+.features {
+    position: relative;
+    z-index: 2;
+    background-color: $color-white;
+    padding-bottom:80px;
+
+    &_heading {
+        text-align: center;
+        padding: 83px 0 39px 0;
+
+
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    &_list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include viewport-sm {
+            flex-direction: column;
+
+
+            // &:nth-last-child(n-1) {
+            //     margin-bottom: 0
+            // }
+        }
+
+
+    }
+
+
+    &_cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        width: 348px;
+
+        &--imageFirst {
+            @extend %card-bg;
+            background-image: linear-gradient(132deg, #3dbdb6 6%, #0089ce 100%);
+
+        }
+
+        &--imageSecond {
+            @extend %card-bg;
+            background-image: linear-gradient(309deg, #7a86cc 91%, #9facf8);
+
+        }
+
+        &--imageThird {
+            @extend %card-bg;
+            background-image: linear-gradient(to bottom, #f3778f, #f26a95 44%, #f15a9d);
+        }
+
+        &--head {
+            color: $color-dark-black;
+            font-weight: bold;
+            margin: 14px 0 12px 0;
+        }
+
+        &--description {
+            color: $color-light-grey;
+            max-width: 205px;
+            line-height: 25px;
+            margin-bottom: 12px;
+        }
+
+        &--link {
+            // color: $btn-color-link;
+            @extend %learn-more;
+        }
+
+        @include viewport-sm {
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0
+            }
+        }
+    }
+}
+
+
+// About us Cards
+.about_us {
+    width: 100%;
+
+    &_card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @include viewport-sm {
+            flex-direction: column;
+
+        }
+    }
+
+        &_list {
+            width: calc((100% / 3) - 25px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+
+            &--description {
+                color: $color-light-purple;
+                padding: 30px 90px;
+            }
+
+            &--link {
+                @extend %learn-more
+            }
+
+
+            @include viewport-sm {
+                width: 100%;
+                margin-bottom: 30px;
+
+                &:last-child {
+                    margin-bottom: 0
+                }
+            }
+        }
+
+
+}
