@@ -27,12 +27,12 @@ function burgerMenu() {
 
 // Video Functionality
 function videoPlayer() {
-  let videoPlay = document.querySelector("video");
+  const videoPlay = document.querySelector("video");
   const videoBtn = document.querySelector(".controls");
   console.log(videoBtn);
-  let btnPause = document.querySelector(".fa-pause");
-  let btnPlay = document.querySelector(".fa-play");
-  let text = document.querySelector(".video-content-wrapper-text");
+  const btnPause = document.querySelector(".fa-pause");
+  const btnPlay = document.querySelector(".fa-play");
+  const text = document.querySelector(".video-content-wrapper-text");
 
   videoPlay.addEventListener("click", () => {
     if (videoPlay.paused) {
@@ -48,12 +48,12 @@ function videoPlayer() {
     }
   });
 
-  let header = document.getElementById("playList-container");
-  let btns = header.getElementsByClassName("playList_content");
+  const playList = document.getElementById("playList-container");
+  const btns = playList.getElementsByClassName("playList_content");
 
   Array.from(btns).forEach((btn) => {
     btn.addEventListener("click", function () {
-      let current = document.querySelector(".active");
+      const current = document.querySelector(".active");
       current.classList.remove("active");
       this.classList.add("active");
 
