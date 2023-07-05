@@ -54,10 +54,8 @@
 /* Footer main */
 .ft-main {
     padding: 60px 0;
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: start;
+    @include flex(flex,space-between,start,null);
 
     @include viewport-sm {
         // flex-direction: column;

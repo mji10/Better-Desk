@@ -202,9 +202,9 @@ table {
 }
 
 .navigation {
-  height: 70px;
   position: absolute;
   width: 100%;
+  height: 70px;
   z-index: 2;
 }
 
@@ -236,11 +236,11 @@ table {
 }
 .nav_main-list--items .nav-links::before {
   transition: 300ms;
-  height: 5px;
   content: "";
-  position: absolute;
   background-color: #3dbdb6;
   width: 0%;
+  height: 5px;
+  position: absolute;
   top: 38px;
 }
 .nav_main-list--items .nav-links:hover::before {
@@ -263,14 +263,14 @@ table {
   transition: all 0.85s ease;
   display: inline-block;
   content: "";
-  position: absolute;
   border-radius: 4px;
   width: 0;
   box-sizing: border-box;
   z-index: -2;
-  left: 50%;
-  top: 50%;
   height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 .nav_main-list--items .sign-up:hover {
   color: #3e3e58;
@@ -293,7 +293,7 @@ table {
 .burger_menu-lines {
   background: #ffffff;
   width: 32px;
-  height: 3px;
+  height: 32px;
   display: block;
   position: relative;
   transition: all ease 0.1s;
@@ -350,8 +350,8 @@ table {
 .show {
   visibility: visible;
   opacity: 1;
-  height: calc(100vh - 450px);
   width: 100%;
+  height: calc(100vh - 450px);
 }
 
 /* Open Menu */
@@ -421,8 +421,8 @@ table {
 /* Footer main */
 .ft-main {
   padding: 60px 0;
-  display: flex;
   flex-wrap: wrap;
+  display: flex;
   justify-content: space-between;
   align-items: start;
 }
@@ -574,6 +574,9 @@ table {
 }
 @media (min-width: 0) and (max-width: 760px) {
   .features_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
   }
 }
@@ -619,11 +622,13 @@ table {
 }
 .about_us_card {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  flex-direction: row;
 }
 @media (min-width: 0) and (max-width: 760px) {
   .about_us_card {
+    display: flex;
+    justify-content: space-between;
     flex-direction: column;
   }
 }
@@ -685,9 +690,8 @@ img {
 }
 .hero_fixed {
   position: fixed;
-  width: 100%;
   top: 0;
-  /* bottom: 0; */
+  width: 100%;
   z-index: 1;
 }
 .hero_wrapper {

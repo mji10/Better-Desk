@@ -1,4 +1,4 @@
-// Featues Section
+// Features Section
 
 .features {
     position: relative;
@@ -18,17 +18,10 @@
     }
 
     &_list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(flex,center,center,null);
 
         @include viewport-sm {
-            flex-direction: column;
-
-
-            // &:nth-last-child(n-1) {
-            //     margin-bottom: 0
-            // }
+            @include flex(flex,center,center,column);
         }
 
 
@@ -36,10 +29,7 @@
 
 
     &_cards {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include flex(flex,center,center,column);
         text-align: center;
         width: 348px;
 
@@ -94,22 +84,17 @@
     width: 100%;
 
     &_card {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @include flex(flex,space-between,null,row);
 
         @include viewport-sm {
-            flex-direction: column;
+            @include flex(flex,space-between,null,column);
 
         }
     }
 
         &_list {
             width: calc((100% / 3) - 25px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            @include flex(flex,center,center,column);
             text-align: center;
 
             &--description {
