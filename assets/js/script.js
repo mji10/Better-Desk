@@ -93,5 +93,3 @@ window.addEventListener("load", () => {
   burgerMenu();
   videoPlayer();
 });
-
-console.log("Hello World! how are you?");
