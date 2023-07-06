@@ -45,38 +45,38 @@
 
             }
 
-            .sign-up {
-                border: 1px solid $color-warm-grey;
-                display: block;
-                padding: 10px 20px;
-                color: $color-white;
-                text-decoration: none;
-                border-radius:4px;
-                position: relative;
-                &::before {
-                    transition: all 0.85s ease;
-                    display: inline-block;
-                    content: "";
-                    border-radius: 4px;
-                    width: 0;
-                    box-sizing: border-box;
-                    z-index: -2;
-                    height:0;
+            // .sign-up {
+            //     border: 1px solid $color-warm-grey;
+            //     display: block;
+            //     padding: 10px 20px;
+            //     color: $color-white;
+            //     text-decoration: none;
+            //     border-radius:4px;
+            //     position: relative;
+            //     &::before {
+            //         transition: all 0.85s ease;
+            //         display: inline-block;
+            //         content: "";
+            //         border-radius: 4px;
+            //         width: 0;
+            //         box-sizing: border-box;
+            //         z-index: -2;
+            //         height:0;
 
-                    @include position(absolute,50%,null,null,50%);
-                  }
-                  &:hover {
-                    color:$color-purple;
-                    &::before {
-                      background: $color-white;
+            //         @include position(absolute,50%,null,null,50%);
+            //       }
+            //       &:hover {
+            //         color:$color-purple;
+            //         &::before {
+            //           background: $color-white;
                       
                      
-                      @include size(100%,100%);
-                      left: 0;
-                      top:0;
-                    }
-                  }
-            }
+            //           @include size(100%,100%);
+            //           left: 0;
+            //           top:0;
+            //         }
+            //       }
+            // }
         }
     }
 }
@@ -90,7 +90,7 @@
 
     &-lines{
             background: $color-white;
-            @include size(32px,32px);
+            @include size(32px,3px);
             display: block;
             position: relative;
             transition: all ease 0.1s;
@@ -134,8 +134,7 @@
 .nav_main-list--mobile {
     @include flex(flex,center,center,column);
     background: $color-purple;
-    height: calc(100vh - 450px);
-    width: 0;
+    @include size(0,100vh);
     color: $color-white;
     visibility: hidden;
     opacity: 0;
@@ -153,7 +152,7 @@
 .show{
     visibility: visible;
     opacity: 1;
-    @include size(100%,calc(100vh - 450px));
+    @include size(100%,100vh);
 }
 
  /* Open Menu */

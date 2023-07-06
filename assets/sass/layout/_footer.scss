@@ -1,7 +1,6 @@
 .footer{
     position: relative;
     z-index: 1;
-    background-color:$color-dark-blue;
     line-height: 1.5;
     .ft {
         &-list {
@@ -28,7 +27,6 @@
 
 
     &_bottom{
-        background-color: $color-purple;
         padding: 30px 0;
         width: 100%;
 

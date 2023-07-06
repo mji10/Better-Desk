@@ -14,7 +14,6 @@ function navbar() {
 function burgerMenu() {
   const burger = document.querySelector(".burger_menu");
   const deskNav = document.querySelector(".nav_main-list--mobile");
-  const show = document.querySelector(".show");
   const mobileNav = document.querySelector(".mob_nav");
   burger.addEventListener("click", () => {
     document.getElementsByTagName("BODY")[0].classList.toggle("no_scroll");
@@ -45,6 +44,7 @@ function videoPlayer() {
       videoPlay.pause();
       btnPause.classList.add("none");
       btnPlay.classList.remove("none");
+      videoBtn.classList.remove("opacity");
     }
   });
 

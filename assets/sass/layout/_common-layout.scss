@@ -28,7 +28,6 @@ img {
 }
 
 .hero {
-    background-color: $color-purple;
     position: relative;
     min-height: 85vh;
 
@@ -121,12 +120,10 @@ img {
 .brands {
 
     @extend %onTop;
-    background-color: $color-offwhite;
-    padding: 20px 0;
+    padding: 39px 0;
 
     &_slider {
         @include flex(flex,space-evenly,center,null);
-        min-height: 105px;
         max-width: 1000px;
         margin: auto;
 
@@ -134,8 +131,12 @@ img {
         @include viewport-sm {
             @include flex(null,null,null,column);
 
-            & > picture * {
+            & > picture {
                 margin-bottom: 30px;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
             }
         }
 
@@ -147,11 +148,10 @@ img {
 
 .why_us {
     @extend %onTop;
-    background-image: linear-gradient(117deg, #3dbdb6 3%, #0089ce 100%);
     padding: 80px 0 90px 0;
 
     &--heading {
-        padding: 0 0 33px 0;
+        margin: 0 0 33px 0;
     }
 
     &--description {
@@ -220,7 +220,6 @@ img {
 .about_us {
     @extend %onTop;
     padding: 80px 0;
-    background-color: $color-white;
 
     &--heading {
         color: $color-greyish-brown;
@@ -233,7 +232,6 @@ img {
 
 .cta {
     @extend %onTop;
-    background-image: $color-linear2;
     padding: 40px 0;
 
 
@@ -406,7 +404,6 @@ img {
 
 .subscribe_cta {
     @extend %onTop;
-    background-color: $color-cyan;
     padding: 80px 0;
 
     &_wrapper {

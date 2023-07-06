@@ -30,6 +30,19 @@
     margin-left: -14px;
 }
 
+%btn {
+    border: none;
+    border-left: none;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    display: inline-block;
+
+    @include viewport-sm{
+        margin-top:10px;
+        border-radius: 4px;
+    }
+}
+
 %form {
     max-width: 100%;
     margin: auto;
@@ -54,17 +67,7 @@
     border-radius: 3px 0 0 3px;
 }
 
-%form-btn {
-    padding: 16px 38px;
-    border: none;
-    border-left: none;
-    cursor: pointer;
-    border-radius: 0 4px 4px 0;
 
-    @include viewport-sm{
-        margin-top:10px;
-    }
-}
 
 %learn-more {
     font-weight: 700;

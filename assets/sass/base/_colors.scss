@@ -1,0 +1,34 @@
+// background Colors
+.bc{
+    &-primary{
+        background-color: $color-purple;
+    }
+
+    &-secondary{
+        background-color: $color-white;
+    }
+
+    &-offwhite{
+        background-color: $color-offwhite;
+    }
+
+    &-cyan-gradient{
+        background-image: $color-cyan-linear;
+    }
+
+    &-blue-gradient{
+        background-image: $color-blue-linear;
+    }
+
+    &-cyan{
+        background-color: $color-cyan;
+    }
+
+    &-footer-primary{
+        background-color:$color-dark-blue
+    }
+
+    &-footer-secondary{
+        background-color:$color-purple;
+    }
+}
