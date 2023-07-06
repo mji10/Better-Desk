@@ -3,6 +3,11 @@
         &-lg{
             @include font($heading-lg,$color-white,normal);
 
+
+            @include viewport-md{
+                @include font($heading-md,null,null)
+            }
+
             @include viewport-sm{
                 @include font($heading-sm,null,null);
             }
@@ -11,8 +16,12 @@
         &-md{
             @include font($heading-md,$color-white,normal);
 
-            @include viewport-sm{
+            @include viewport-md{
+                @include font($heading-sm,null,null);
+                text-align: center;
+            }
 
+            @include viewport-sm{
                 @include font($heading-xs,null,null);
                 text-align: center;
             }

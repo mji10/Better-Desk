@@ -1,20 +1,20 @@
 .navigation {
-    position: absolute;
+    position: fixed;
     @include size(100%,70px);
     z-index: 2;
 }
 
 
 .brand {
-    @include flex(flex,space-between,center,null);
+    @include flex(space-between,center,null);
     min-height: 70px;
 }
 
 .nav_main {
-    @include flex(flex,center,center,null);
+    @include flex(center,center,null);
 
     &-list {
-        @include flex(flex,center,center,null);
+        @include flex(center,center,null);
 
         &--items {
             position: relative;
@@ -77,6 +77,14 @@
             //         }
             //       }
             // }
+
+            @include viewport-sm{
+                margin-bottom: 30px;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 }
@@ -132,7 +140,7 @@
 }
 
 .nav_main-list--mobile {
-    @include flex(flex,center,center,column);
+    @include flex(center,center,column);
     background: $color-purple;
     @include size(0,100vh);
     color: $color-white;

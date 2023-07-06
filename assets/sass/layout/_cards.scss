@@ -3,7 +3,6 @@
 .features {
     position: relative;
     z-index: 2;
-    background-color: $color-white;
     padding: 83px 0;
 
     &_heading {
@@ -18,10 +17,10 @@
     }
 
     &_list {
-        @include flex(flex,center,center,null);
+        @include flex(center,center,row);
 
         @include viewport-sm {
-            @include flex(flex,center,center,column);
+            @include flex(center,center,column);
         }
 
 
@@ -29,25 +28,17 @@
 
 
     &_cards {
-        @include flex(flex,center,center,column);
+        @include flex(center,center,column);
         text-align: center;
         width: 348px;
 
-        &--imageFirst {
-            @extend %card-bg;
-            background-image: linear-gradient(132deg, #3dbdb6 6%, #0089ce 100%);
-
-        }
-
-        &--imageSecond {
-            @extend %card-bg;
-            background-image: linear-gradient(309deg, #7a86cc 91%, #9facf8);
-
-        }
-
-        &--imageThird {
-            @extend %card-bg;
-            background-image: linear-gradient(to bottom, #f3778f, #f26a95 44%, #f15a9d);
+        &--icon {
+            border-radius: 50%;
+    height: 99px;
+    width: 99px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
         }
 
         &--head {
@@ -84,22 +75,26 @@
     width: 100%;
 
     &_card {
-        @include flex(flex,space-between,null,row);
+        @include flex(space-between,null,row);
 
         @include viewport-sm {
-            @include flex(flex,space-between,null,column);
+            @include flex(space-between,null,column);
 
         }
     }
 
         &_list {
             width: calc((100% / 3) - 25px);
-            @include flex(flex,center,center,column);
+            @include flex(center,center,column);
             text-align: center;
 
             &--description {
                 color: $color-light-purple;
                 padding: 30px 90px;
+
+                @include viewport-md{
+                    padding:10px;
+                }
             }
 
             &--link {

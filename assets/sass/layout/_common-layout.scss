@@ -38,7 +38,7 @@ img {
     }
 
     &_wrapper {
-        @include flex(flex,null,center,null);
+        @include flex(null,center,null);
         min-height: 684px;
 
         &--content {
@@ -67,6 +67,7 @@ img {
         @include viewport-md {
 
             align-items: start;
+            justify-content: center;
 
             &--image {
                 right: 50px;
@@ -123,14 +124,13 @@ img {
     padding: 39px 0;
 
     &_slider {
-        @include flex(flex,space-evenly,center,null);
+        @include flex(space-evenly,center,null);
         max-width: 1000px;
         margin: auto;
 
 
         @include viewport-sm {
-            @include flex(null,null,null,column);
-
+            @include flex(null,null,column);
             & > picture {
                 margin-bottom: 30px;
 
@@ -157,14 +157,25 @@ img {
     &--description {
         line-height: 28px;
         margin-bottom: 60px;
+
+        @include viewport-md{
+            margin-bottom:0
+        }
+
+        @include viewport-sm{
+            margin-bottom:60px
+        }
     }
 
     &_activity {
-        @include flex(flex,space-between,null,null);
+        @include flex(space-between,null,null);
 
+        @include viewport-md{
+            @include flex(space-between,center,column);
+        }
 
         @include viewport-sm {
-            @include flex(null,null,null,column);
+            @include flex(null,null,column);
         }
     }
 
@@ -190,7 +201,7 @@ img {
             line-height: 20px;
         }
 
-        @include viewport-sm {
+        @include viewport-md {
             max-width: 100%;
         }
     }
@@ -209,9 +220,12 @@ img {
         }
     }
 
+    @include viewport-md{
+        width: 100%;
+    }
+
     @include viewport-sm {
         margin-top: 0;
-        width: 100%;
     }
 }
 
@@ -236,8 +250,7 @@ img {
 
 
     &_wrapper {
-        @include flex(flex,space-between,center,null);
-
+        @include flex(space-between,center,null);
         &_main {
 
             &--head {
@@ -263,7 +276,8 @@ img {
 
 
         @include viewport-sm {
-            @include flex(null,null,null,column-reverse);
+            @include flex(null,null,column-reverse);
+
         }
     }
 
@@ -334,7 +348,7 @@ img {
 }
 
 .video_wrapper {
-    @include flex(flex,space-around,null,null)
+    @include flex(space-around,null,null)
 
 }
 
@@ -344,9 +358,12 @@ img {
     padding: 40px 0;
 
         &_wrapper {
-            @include flex(flex,space-between,null,null);
+            @include flex(space-between,null,null);
 
 
+            @include viewport-md{
+                display:block
+            }
             @include viewport-sm {
                 margin-bottom: 30px;
                 display: block;
@@ -358,7 +375,7 @@ img {
         }
     
         &_content {
-            @include flex(flex,null,center,null);
+            @include flex(null,center,null);
             width: fit-content;
             margin-bottom: 10px;
     
@@ -407,7 +424,7 @@ img {
     padding: 80px 0;
 
     &_wrapper {
-        @include flex(flex,center,center,column);
+        @include flex(center,center,column);
     }
 
     &--head {

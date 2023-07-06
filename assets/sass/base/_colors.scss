@@ -12,6 +12,9 @@
         background-color: $color-offwhite;
     }
 
+    &-cyan{
+        background-color: $color-cyan;
+    }
     &-cyan-gradient{
         background-image: $color-cyan-linear;
     }
@@ -20,8 +23,13 @@
         background-image: $color-blue-linear;
     }
 
-    &-cyan{
-        background-color: $color-cyan;
+    &-violet-gradient{
+
+        background-image:$color-violet-gradient;
+    }
+
+    &-pink-gradient{
+        background-image:$color-pink-gradient;
     }
 
     &-footer-primary{

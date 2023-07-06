@@ -6,9 +6,9 @@
 }
 
 
-@mixin flex($display , $justify-content, $align-items , $flex-direction){
+@mixin flex($justify-content, $align-items , $flex-direction){
 
-  display:$display;
+  display:flex;
   justify-content: $justify-content;
   align-items:$align-items;
   flex-direction:$flex-direction;

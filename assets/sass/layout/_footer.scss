@@ -53,20 +53,20 @@
 .ft-main {
     padding: 60px 0;
     flex-wrap: wrap;
-    @include flex(flex,space-between,start,null);
+    @include flex(space-between,start,null);
 
     @include viewport-sm {
         // flex-direction: column;
-        @include flex(null,null,null,column);
+        @include flex(null,null,column);
     }
 
     &-logo {
         @include size(30%);
-        @include flex(flex, null, null,column);
+        @include flex(null, null,column);
 
         @include viewport-sm {
             @include size(100%);
-            @include flex(flex, center, center,null);
+            @include flex(center, center,null);
             text-align: center;
         }
     }
@@ -80,10 +80,14 @@
     &-content {
         @include size(30%);
 
-        @include flex(flex, space-between, null,null);
+        @include flex(space-between, null,null);
+
+        @include viewport-md{
+            @include size(50%)
+        }
 
         @include viewport-sm {
-            @include flex(flex, space-between, start,null);
+            @include flex(space-between, start,null);
             @include size(100%);
             margin-top: 50px;
         }
@@ -91,7 +95,7 @@
 
     &-social{
         width: 30%;
-        @include flex(flex,end,null,null);
+        @include flex(end,null,null);
 
         a{
             margin-right:12px;
@@ -105,9 +109,13 @@
             }
         }
 
+        @include viewport-md{
+            @include size(15%)
+        }
+
         @include viewport-sm{
             @include size(100%);
-            @include flex(flex,center,null,null);
+            @include flex(center,null,null);
             margin-top: 50px;
         }
     }

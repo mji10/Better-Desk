@@ -1,13 +1,8 @@
 // ----------------------------------------------------------------------------------------------------------------------
 
-// Just for DEVELOPMENT Mode
-// const gulp = require('gulp');
-// const sass = require("gulp-sass");
-// const autoprefixer = require("gulp-autoprefixer");
-// const imagemin = require("gulp-imagemin");
-
 // importing
-import imagemin from "gulp-imagemin";
+import image from "gulp-image";
+import webp from "gulp-webp";
 import autoprefixer from "gulp-autoprefixer";
 import gulp from "gulp";
 import dartSass from "sass";
@@ -26,34 +21,27 @@ gulp.task("dev", function () {
     .pipe(autoprefixer())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("assets/css"));
-
-  // Optimize image
-
-  // const imageOptim = gulp
-  //   .src("assets/img*.{png,jpg}")
-  //   .pipe(imagemin())
-  //   .pipe(gulp.dest("assets/css"));
-
-  // console.log("div is running");
-
   return sasscomplie;
 });
 
-gulp.task("imagemin", function () {
+// image optimization
+gulp.task("image", function () {
+  return gulp.src("assets/img/*").pipe(image()).pipe(gulp.dest("dist/img"));
+});
+
+// image convertion
+
+gulp.task("webp", function () {
   return gulp
-    .src("assets/img*.{png,jpg}")
-    .pipe(
-      imagemin([
-        imagemin.mozjpeg({ quality: 75, progressive: true }),
-        imagemin.optipng({ optimizationLevel: 5 }),
-      ])
-    )
-    .pipe(gulp.dest("assets/img"));
+    .src("assets/img/*")
+    .pipe(webp())
+    .pipe(gulp.dest("assets/img"))
+    .pipe(gulp.dest("dist/img"));
 });
 
 // Watch for changes
 gulp.task("watch", function () {
-  gulp.watch(["assets/sass/**/*.scss"], gulp.series("dev"));
+  gulp.watch(["assets/sass/**/*.scss"]);
 });
 
 // gulp.task("watch", function () {
@@ -62,7 +50,7 @@ gulp.task("watch", function () {
 // });
 
 // Default task - Development Mode
-gulp.task("default", gulp.series("dev", "imagemin", "watch"));
+gulp.task("default", gulp.series("dev", "image", "webp", "watch"));
 
 // 2nd Method
 

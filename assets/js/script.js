@@ -52,27 +52,51 @@ function videoPlayer() {
   const btns = playList.getElementsByClassName("playList_content");
 
   Array.from(btns).forEach((btn) => {
-    btn.addEventListener("click", function () {
-      const current = document.querySelector(".active");
-      current.classList.remove("active");
-      this.classList.add("active");
+    btn.addEventListener(
+      "click",
+      function (e) {
+        btn.classList.add("active");
+        console.log(btn);
 
-      const videoSource = this.getAttribute("data-video-src");
-      const videoPoster = this.getAttribute("data-video-poster");
+        let allElements = [...btns];
+        console.log(allElements);
 
-      videoPlay.setAttribute("src", videoSource);
-      videoPlay.setAttribute("poster", videoPoster);
-      text.classList.remove("none");
-      videoPlay.load();
+        let selectedElement = allElements.filter((eachElement) => {
+          console.log(allElements);
+          console.log(eachElement == btn);
+          return eachElement !== btn;
+        });
 
-      videoPlay.addEventListener("ended", () => {
-        btnPause.classList.add("none");
-        btnPlay.classList.remove("none");
-        text.classList.remove("none");
-        videoBtn.classList.remove("opacity");
+        // Getting new Array which also present the active class becoz of the click as it not removed.
+
+        console.log(selectedElement);
+
+        selectedElement.map((eachElement) => {
+          eachElement.classList.remove("active");
+        });
+        // const current = document.querySelector(".active");
+        // current.classList.remove("active");
+        // this.classList.add("active");
+
+        const videoSource = this.getAttribute("data-video-src");
+        const videoPoster = this.getAttribute("data-video-poster");
+
         videoPlay.setAttribute("src", videoSource);
-      });
-    });
+        videoPlay.setAttribute("poster", videoPoster);
+        text.classList.remove("none");
+        videoPlay.load();
+
+        videoPlay.addEventListener("ended", () => {
+          btnPause.classList.add("none");
+          btnPlay.classList.remove("none");
+          text.classList.remove("none");
+          videoBtn.classList.remove("opacity");
+          videoPlay.setAttribute("src", videoSource);
+        });
+        e.stopPropagation();
+      },
+      true
+    );
 
     videoPlay.addEventListener("mouseover", function () {
       if (!videoPlay.paused) {
