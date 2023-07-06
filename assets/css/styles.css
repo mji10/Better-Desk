@@ -359,7 +359,7 @@ table {
     text-decoration: none;
   }
 }
-.show {
+.mob_nav.show, .mob_nav.show .nav_main-list--mobile {
   visibility: visible;
   opacity: 1;
   width: 100%;

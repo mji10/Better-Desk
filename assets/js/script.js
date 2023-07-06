@@ -18,7 +18,7 @@ function burgerMenu() {
   burger.addEventListener("click", () => {
     document.getElementsByTagName("BODY")[0].classList.toggle("no_scroll");
     burger.classList.toggle("open");
-    deskNav.classList.toggle("show");
+    // deskNav.classList.toggle("show");
     mobileNav.classList.toggle("show");
     console.log("hello");
   });

@@ -157,7 +157,7 @@
 }
 }
 
-.show{
+.mob_nav.show , .mob_nav.show .nav_main-list--mobile{
     visibility: visible;
     opacity: 1;
     @include size(100%,100vh);
