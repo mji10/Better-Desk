@@ -13,12 +13,10 @@ function navbar() {
 // Burger Menu
 function burgerMenu() {
   const burger = document.querySelector(".burger_menu");
-  const deskNav = document.querySelector(".nav_main-list--mobile");
   const mobileNav = document.querySelector(".mob_nav");
   burger.addEventListener("click", () => {
     document.getElementsByTagName("BODY")[0].classList.toggle("no_scroll");
     burger.classList.toggle("open");
-    // deskNav.classList.toggle("show");
     mobileNav.classList.toggle("show");
     console.log("hello");
   });
@@ -58,21 +56,23 @@ function videoPlayer() {
         btn.classList.add("active");
         console.log(btn);
 
-        let allElements = [...btns];
-        console.log(allElements);
+        // Getting all btn at once
+        let allBtns = [...btns];
+        console.log(allBtns);
 
-        let selectedElement = allElements.filter((eachElement) => {
-          console.log(allElements);
-          console.log(eachElement == btn);
-          return eachElement !== btn;
+        let selectedBtn = allBtns.filter((eachBtn) => {
+          console.log(allBtns);
+          console.log(eachBtn == btn);
+          return eachBtn !== btn;
         });
 
         // Getting new Array which also present the active class becoz of the click as it not removed.
 
-        console.log(selectedElement);
+        console.log(selectedBtn);
 
-        selectedElement.map((eachElement) => {
-          eachElement.classList.remove("active");
+        // Removing class active from the new array we getting
+        selectedBtn.map((eachBtn) => {
+          eachBtn.classList.remove("active");
         });
 
         const videoSource = this.getAttribute("data-video-src");
