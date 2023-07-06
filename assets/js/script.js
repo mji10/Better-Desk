@@ -74,9 +74,6 @@ function videoPlayer() {
         selectedElement.map((eachElement) => {
           eachElement.classList.remove("active");
         });
-        // const current = document.querySelector(".active");
-        // current.classList.remove("active");
-        // this.classList.add("active");
 
         const videoSource = this.getAttribute("data-video-src");
         const videoPoster = this.getAttribute("data-video-poster");
