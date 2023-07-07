@@ -1,5 +1,5 @@
 body {
-    font-family: 'proximanova-regularregular';
+    font-family: $font-family;
 }
 
 .container {
@@ -53,9 +53,6 @@ img {
             display: block;
             width: 90%;
         }
-
-        // &--text{
-        // }
 
         .title {
             max-width: 343px;

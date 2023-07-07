@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "proximanova-regularregular";
+  font-family: "proximaNova";
   src: url("../fonts/Proxima-Nova-Font/proximanovaregular-webfont.woff2") format("woff2"), url("../../fonts/Proxima-Nova-Font/proximanovaregular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -116,20 +116,20 @@ table {
   }
 }
 
-.subscribe__form, .hero__form {
+.subscribe__input, .hero__input {
   max-width: 100%;
   margin: auto;
   font-size: 0;
   display: flex;
 }
 @media (min-width: 0) and (max-width: 981px) {
-  .subscribe__form, .hero__form {
+  .subscribe__input, .hero__input {
     display: flex;
     justify-content: center;
   }
 }
 @media (min-width: 0) and (max-width: 760px) {
-  .subscribe__form, .hero__form {
+  .subscribe__input, .hero__input {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,7 +137,7 @@ table {
   }
 }
 
-.subscribe__form--input, .hero__form--input {
+.subscribe__input--input, .hero__input--input {
   padding: 16px 20px;
   border: none;
   display: inline-block;
@@ -343,7 +343,7 @@ table {
   }
   .nav_main-list--mobile {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-direction: column;
     background: #3e3e58;
@@ -353,6 +353,7 @@ table {
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s ease-in-out;
+    padding: 50px 0 0 0;
   }
   .nav_main-list--items .nav-links {
     display: block;
@@ -510,47 +511,47 @@ table {
   }
 }
 
-.hero__form--input {
+.hero__input--input {
   background: rgba(177, 177, 177, 0.5);
   box-shadow: 0 0 8px 0 rgba(177, 177, 177, 0.5);
 }
-.hero__form--input::-moz-placeholder {
+.hero__input--input::-moz-placeholder {
   color: #ffffff;
   font-size: 16px;
 }
-.hero__form--input::placeholder {
+.hero__input--input::placeholder {
   color: #ffffff;
   font-size: 16px;
 }
-.hero__form--input:focus {
+.hero__input--input:focus {
   outline: 0;
 }
-.hero__form--input:focus::-moz-placeholder {
+.hero__input--input:focus::-moz-placeholder {
   color: transparent;
 }
-.hero__form--input:focus::placeholder {
+.hero__input--input:focus::placeholder {
   color: transparent;
 }
 
-.subscribe__form--input {
+.subscribe__input--input {
   background: transparent;
   border: 1px solid #ffffff;
 }
-.subscribe__form--input::-moz-placeholder {
+.subscribe__input--input::-moz-placeholder {
   color: #ffffff;
   font-size: 16px;
 }
-.subscribe__form--input::placeholder {
+.subscribe__input--input::placeholder {
   color: #ffffff;
   font-size: 16px;
 }
-.subscribe__form--input:focus {
+.subscribe__input--input:focus {
   outline: 0;
 }
-.subscribe__form--input:focus::-moz-placeholder {
+.subscribe__input--input:focus::-moz-placeholder {
   color: transparent;
 }
-.subscribe__form--input:focus::placeholder {
+.subscribe__input--input:focus::placeholder {
   color: transparent;
 }
 
@@ -743,7 +744,7 @@ table {
 }
 
 body {
-  font-family: "proximanova-regularregular";
+  font-family: proximaNova;
 }
 
 .container {

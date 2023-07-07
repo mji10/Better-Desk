@@ -18,7 +18,6 @@ function burgerMenu() {
     document.getElementsByTagName("BODY")[0].classList.toggle("no_scroll");
     burger.classList.toggle("open");
     mobileNav.classList.toggle("show");
-    console.log("hello");
   });
 }
 
@@ -26,7 +25,6 @@ function burgerMenu() {
 function videoPlayer() {
   const videoPlay = document.querySelector("video");
   const videoBtn = document.querySelector(".controls");
-  console.log(videoBtn);
   const btnPause = document.querySelector(".fa-pause");
   const btnPlay = document.querySelector(".fa-play");
   const text = document.querySelector(".video-content-wrapper-text");
@@ -54,21 +52,14 @@ function videoPlayer() {
       "click",
       function (e) {
         btn.classList.add("active");
-        console.log(btn);
 
         // Getting all btn at once
         const allBtns = [...btns];
-        console.log(allBtns);
-
-        const selectedBtn = allBtns.filter((eachBtn) => {
-          console.log(allBtns);
-          console.log(eachBtn == btn);
-          return eachBtn !== btn;
-        });
 
         // Getting new Array which also present the active class becoz of the click as it not removed.
-
-        console.log(selectedBtn);
+        const selectedBtn = allBtns.filter((eachBtn) => {
+          return eachBtn !== btn;
+        });
 
         // Removing class active from the new array we getting
         selectedBtn.map((eachBtn) => {

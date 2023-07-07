@@ -1,6 +1,5 @@
 // Banner Form
-.hero__form {
-    // width: 422px;
+.hero__input {
     @extend %form;
 
     &--input{
@@ -25,8 +24,7 @@
 
 // Subscribe Form
 // Banner Form
-.subscribe__form {
-    // width: 422px;
+.subscribe__input {
     @extend %form;
 
     &--input{
