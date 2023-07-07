@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "proximanova-regularregular";
-  src: url("../fonts/Proxima-Nova-Font/proximanovaregular-webfont.woff2") format("woff2"), url("../fonts/Proxima-Nova-Font/proximanovaregular-webfont.woff") format("woff");
+  src: url("../fonts/Proxima-Nova-Font/proximanovaregular-webfont.woff2") format("woff2"), url("../../fonts/Proxima-Nova-Font/proximanovaregular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -558,13 +558,13 @@ table {
   padding: 16px 38px;
   background: #3dbdb6;
   box-shadow: 0 1px 6px 0 #4449a2;
-  transition: all 0.5s ease-in-out;
   color: #ffffff;
 }
 .btn-primary:hover {
   background: #ffffff;
   color: #3dbdb6;
   box-shadow: 0 1px 12px 0 #e2e2e6;
+  transition: all 0.5s ease-in-out;
 }
 .btn-secondary {
   padding: 16px 38px;
