@@ -41,7 +41,7 @@ gulp.task("webp", function () {
 
 // Watch for changes
 gulp.task("watch", function () {
-  gulp.watch(["assets/sass/**/*.scss"]);
+  gulp.watch(["assets/sass/**/*.scss"], gulp.series("dev"));
 });
 
 // gulp.task("watch", function () {

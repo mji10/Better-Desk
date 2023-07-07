@@ -1,19 +1,16 @@
 %burger-menu-lines {
     content: "";
     background: #ffffff;
-    width: 32px;
-    height: 3px;
+    @include size(32px,3px);
     display: block;
-    position: absolute;
-    left: 0;
+    @include position(absolute,null,null,null,0);
     transition: all ease 0.2s;
 }
 
 
 %hr-line {
     content: "";
-    height: 1px;
-    width: 180px;
+    @include size(180px,1px);
     border: 1px solid $color-warm-grey;
     display: block;
     opacity: 0.3;

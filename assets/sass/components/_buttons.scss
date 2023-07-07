@@ -42,13 +42,10 @@
             display: inline-block;
             content: "";
             border-radius: 4px;
-            width: 0;
             box-sizing: border-box;
             z-index: -2;
-            height: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
+            @include size(0,0);
+            @include position(absolute,50%,null,null,50%);
         }
 
         &:hover {
@@ -78,7 +75,7 @@
             border-width: 0 2px 2px 0;
             display: inline-block;
             padding: 2px;
-            margin: 0 0 2px 6px;
+            margin-left: 2px;
             transform: rotate(-45deg);
             vertical-align: middle;
             transition: transform 0.3s ease-out;

@@ -34,11 +34,8 @@
 
         &--icon {
             border-radius: 50%;
-    height: 99px;
-    width: 99px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   @include size(99px,99px);
+   @include flex(center,center,null);
         }
 
         &--head {
@@ -55,7 +52,6 @@
         }
 
         &--link {
-            // color: $btn-color-link;
             @extend %learn-more;
         }
 
@@ -98,7 +94,7 @@
             }
 
             &--link {
-                @extend %learn-more
+                @extend %learn-more;
             }
 
 

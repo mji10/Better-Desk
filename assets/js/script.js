@@ -57,10 +57,10 @@ function videoPlayer() {
         console.log(btn);
 
         // Getting all btn at once
-        let allBtns = [...btns];
+        const allBtns = [...btns];
         console.log(allBtns);
 
-        let selectedBtn = allBtns.filter((eachBtn) => {
+        const selectedBtn = allBtns.filter((eachBtn) => {
           console.log(allBtns);
           console.log(eachBtn == btn);
           return eachBtn !== btn;
